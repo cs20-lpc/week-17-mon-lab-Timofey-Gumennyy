@@ -12,10 +12,10 @@ class Graph {
 
     protected:
         // the number of vertices
-        int v;
+        int verticesAmount;
 
         // the number of edges
-        int e;
+        int edgesAmount;
 
         // the type of graph
         GType graphType;
@@ -26,7 +26,7 @@ class Graph {
     public:
         // default constructor
         Graph(int vv = 0, int ee = 0, GType gt = UNDIRECTED)
-        : v(vv), e(ee), graphType(gt) { }
+        : verticesAmount(vv), edgesAmount(ee), graphType(gt) { }
 
         // destructor
         virtual ~Graph() { }
@@ -38,10 +38,10 @@ class Graph {
         virtual bool isEdge(int, int) const = 0;
 
         // return the number of vertices
-        virtual int numVertices() const { return v; }
+        virtual int numVertices() const { return verticesAmount; }
 
         // return the number of edges
-        virtual int numEdges() const { return e; }
+        virtual int numEdges() const { return edgesAmount; }
 
         // toggle the existence of an edge between the two given vertices
         virtual void toggleEdge(int, int) = 0;

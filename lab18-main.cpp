@@ -1,4 +1,5 @@
 #include "GraphMatrix.hpp"
+#include <algorithm>
 
 void createGraph(Graph*&);
 void checkGraphType(Graph*);
@@ -12,6 +13,7 @@ int main() {
     // variables
     const int EXIT_VALUE = 8;
     Graph*    gPtr       = nullptr;
+    // Graph*    gPtr = new GraphMatrix(5, Graph::UNDIRECTED);
     int       userChoice = 0;
 
     // menu loop
